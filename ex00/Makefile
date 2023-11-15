@@ -6,13 +6,13 @@
 #    By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/15 02:45:35 by faksouss          #+#    #+#              #
-#    Updated: 2023/11/15 02:50:01 by faksouss         ###   ########.fr        #
+#    Updated: 2023/11/15 02:57:36 by faksouss         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRC = main.cpp
 
-OBJ = $(SRC:.o=.cpp)
+OBJ = $(SRC:.cpp=.o)
 
 HDR = easyfind.hpp
 
