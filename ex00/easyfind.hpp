@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 01:52:08 by faksouss          #+#    #+#             */
-/*   Updated: 2023/11/15 06:02:20 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/11/15 06:11:06 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+#include <stack>
 
 
 class NotFound : public std::exception {
