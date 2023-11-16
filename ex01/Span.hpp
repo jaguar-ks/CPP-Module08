@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 03:42:19 by faksouss          #+#    #+#             */
-/*   Updated: 2023/11/15 05:57:55 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/11/16 08:18:58 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@
 #include<string>
 #include <list>
 #include<math.h>
-
-#define ABS(x) ((x >= 0) ? x : -x) 
 
 class Span{
     private:

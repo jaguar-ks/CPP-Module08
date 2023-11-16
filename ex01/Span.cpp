@@ -6,7 +6,7 @@
 /*   By: faksouss <faksouss@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 04:20:52 by faksouss          #+#    #+#             */
-/*   Updated: 2023/11/15 05:57:55 by faksouss         ###   ########.fr       */
+/*   Updated: 2023/11/16 08:34:52 by faksouss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,13 +51,22 @@ const char *Span::AlreadyFull::what() const throw() {return "Can't add to the sp
 const char *Span::NoSpanCanBeFound::what() const throw() {return "No Span found to return";}
 
 int Span::shortestSpan( void ) const {
-    std::list<int> tmp = this->lst;
     if (this->lst.empty() || this->lst.size() == 1)
         throw Span::NoSpanCanBeFound();
+    int sp = this->longestSpan();
+    std::list<int> tmp = this->lst;
     tmp.sort();
-    std::list<int>::iterator t1 = tmp.begin();
-    t1++;
-    return abs(*t1 - tmp.front());
+    std::list<int>::iterator it1 = tmp.begin(), it2;
+    while (it1 != tmp.end()){
+        it1++;
+        it2 = it1;
+        it1--;
+        for (;it2 != tmp.end(); it2++)
+            if (sp > abs(*it1 - *it2))
+                sp = abs(*it1 - *it2);
+        it1++;
+    }
+    return sp;
 }
 
 int Span::longestSpan( void ) const {
